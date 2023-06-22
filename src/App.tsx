@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
-import ReactPlayer from 'react-player'
 import video from './assets/GarfieldIP.mp4'
 
 function App() {
