@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
+import ReactPlayer from 'react-player'
 import video from './assets/GarfieldIP.mp4'
 
 function App() {
@@ -18,11 +19,16 @@ function App() {
 
   return (
     <>
-     <div className='App'>
-      <h2>Your IP Address is </h2>
-      <h4>{ip || "loading"}</h4>
-      <video src={video} width="750" height="500" controls autoPlay></video>
-     </div>
+      <div className='App'>
+        <h2>Your IP Address is </h2>
+        <h4>{ip || "loading"}</h4>
+        <div className="video-container">
+          <video src={video} controls height="500" width="800" />
+          <div className="text-overlay">
+            <p>{ip || " "}</p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
